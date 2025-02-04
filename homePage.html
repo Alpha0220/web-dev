@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Welcome to Homepage!</h1>
+    <div id="welcome-message"></div>
+
+    <script>
+        const welcomeMessage = localStorage.getItem('welcomeMessage');
+        if (welcomeMessage) {
+            document.getElementById('welcome-message').textContent = welcomeMessage;
+            localStorage.removeItem('welcomeMessage'); // ลบข้อความออกจาก Local Storage หลังจากแสดงผลแล้ว
+        }
+    </script>
+</body>
+</html>
